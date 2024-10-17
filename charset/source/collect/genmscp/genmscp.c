@@ -467,7 +467,7 @@ BOOL CALLBACK enumCodePagesProc(const char* lpCodePageString)   // pointer to co
     return TRUE;
 }
 
-int main()
+int main(void)
 {
     printf("MAX_WIN_BYTE=%i\n", MAX_WIN_BYTE);
     puts("All codepage names are according to Microsoft's website\n");
