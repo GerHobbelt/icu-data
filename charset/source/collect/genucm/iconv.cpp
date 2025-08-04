@@ -13,6 +13,7 @@
 #include "unicode/ustring.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <iconv.h>
 
 /* The definition of iconv varies by platform, and this helps fix the cast */
 #if defined(U_SOLARIS) || defined(U_BSD)

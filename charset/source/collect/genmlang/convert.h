@@ -9,13 +9,18 @@ using namespace std;
 #ifdef _WIN32
 
 // IMultiLanguage interfaces
-
-#define WIN32_LEAN_AND_MEAN		// Exclude rarely-used stuff from Windows headers
-#include <olestd.h>
-
+//#define WIN32_LEAN_AND_MEAN		// Exclude rarely-used stuff from Windows headers
+//#include <olestd.h>
 #include <mlang.h>
+#include <winver.h>
 
-#endif // _WIN32
+#else
+
+/* else we use iconv */
+#include <errno.h>
+#include <iconv.h>
+
+#endif
 
 #include "unicode/utypes.h"
 

@@ -31,6 +31,9 @@
 #include "unicode/uniset.h"
 #include "convert.h"
 
+using UVector = icu::UVector;
+using UnicodeSet = icu::UnicodeSet;
+
 void 
 save_byte_range(byte_info_ptr byte_info, char *str, size_t offset, size_t size);
 
@@ -109,7 +112,7 @@ static UBool isMultistate = FALSE;
 uint32_t getEncodingFeatures(UHashtable *uni_to_cp, UBool used_PUA);
 
 
-int main(int argc, const char* const argv[])
+int main(int argc, const char** const argv)
 {
     int collectAtIndex = -1;
     UErrorCode status = U_ZERO_ERROR;

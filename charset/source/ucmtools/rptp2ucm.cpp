@@ -47,6 +47,13 @@
 #include <stdio.h>
 #include <time.h>
 
+#ifndef FALSE
+#define FALSE 0
+#endif
+#ifndef TRUE
+#define TRUE 1
+#endif
+
 #define LENGTHOF(array) (int32_t)(sizeof(array)/sizeof((array)[0]))
 
 typedef const char *TMAParray[4];
